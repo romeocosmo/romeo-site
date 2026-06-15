@@ -5,33 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Romeo Nexus — Premium Deals</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
 <style>
 :root{--bg:#0a0a0a;--s1:#141414;--s2:#1e1e1e;--br:#2c2c2c;--red:#c0000a;--red2:#e8001a;--gold:#d4a017;--gold2:#f0c040;--txt:#f5f0e8;--mut:#888;--grn:#00c853}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--txt);font-family:'DM Sans',sans-serif;padding:20px}
-.content{max-width:800px;margin:auto}
-.legal-box{background:var(--s1);border:1px solid var(--br);padding:20px;margin-top:40px;border-radius:8px}
-.legal-box h2{color:var(--gold2);margin-bottom:10px}
-.legal-box p{color:var(--mut);line-height:1.6}
-header{text-align:center;padding:20px}
-h1{color:var(--gold2)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
+.topbar{background:var(--red);text-align:center;padding:8px;font-size:.8rem;font-weight:600;color:#fff}
+header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.97);border-bottom:1px solid #2a0000;backdrop-filter:blur(10px)}
+.hdr{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:0 1.25rem;height:64px}
+.logo{display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;background:linear-gradient(160deg,#6b0000,#c0000a 50%,#7a0000);border-radius:7px;padding:6px 14px;border:1px solid #ff3333;box-shadow:0 2px 16px rgba(192,0,10,.5);position:relative;overflow:hidden;line-height:1;flex-shrink:0}
+.logo-r{font-family:'Playfair Display',serif;font-weight:900;font-size:1.3rem;font-style:italic;background:linear-gradient(180deg,#fff,#ddd 25%,#aaa 50%,#ccc 75%,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-n{font-size:.52rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;background:linear-gradient(90deg,#d4a017,#f0c040);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:right}
+.legal-box{max-width:1300px;margin:2rem auto;padding:2rem;background:var(--s1);border:1px solid var(--br);border-radius:12px;color:var(--txt)}
+.legal-box h2{color:var(--gold2);margin-bottom:0.5rem}
+.legal-box p{font-size:0.9rem;color:var(--mut);line-height:1.6}
 </style>
 </head>
 <body>
-<div class="content">
-    <header>
-        <h1>ROMEO NEXUS</h1>
-        <p>Καλώς ήρθατε στο κατάστημά μας</p>
-    </header><div class="legal-box">
-        <h2>Impressum</h2>
-        <p>Evangelos Velentakis<br>
-        Am Markt 9<br>
-        28340 Zetel<br>
-        Email: romeocosmo@gmail.com</p>
 
-        <h2>Datenschutz</h2>
-        <p>Τα δεδομένα σας προστατεύονται σύμφωνα με τον GDPR. Δεν συλλέγουμε προσωπικά δεδομένα χωρίς τη συγκατάθεσή σας.</p>
+<header>
+    <div class="hdr">
+        <a href="#" class="logo">
+            <span class="logo-r">Romeo</span>
+            <span class="logo-n">NEXUS</span>
+        </a>
     </div>
+</header>
+
+<div class="legal-box">
+    <h2>Impressum</h2>
+    <p>Evangelos Velentakis<br>Am Markt 9<br>28340 Zetel<br>Email: romeocosmo@gmail.com</p>
+    <br>
+    <h2>Datenschutz</h2>
+    <p>Τα δεδομένα σας προστατεύονται σύμφωνα με τον GDPR. Δεν συλλέγουμε προσωπικά δεδομένα χωρίς τη συγκατάθεσή σας.</p>
 </div>
+
 </body>
-</html>
+</html>.legal-box{max-width:1300px;margin:2rem auto;padding:2rem;background:var(--s1);border:1px solid var(--br);border-radius:12px;color:var(--txt)}
+.legal-box h2{color:var(--gold2);font-family:'Playfair Display',serif;margin-bottom:0.5rem}
+.legal-box p{font-size:0.9rem;color:var(--mut);line-height:1.6}
