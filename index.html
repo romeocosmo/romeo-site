@@ -662,5 +662,27 @@ document.addEventListener('click',function(e){
 
 loadProducts();
 </script>
+<div style="background:#141414; padding:20px; text-align:center; border-top:1px solid #2c2c2c;">
+    <a href="javascript:void(0)" onclick="document.getElementById('impOv').classList.add('open')" style="color:#d4a017; margin:0 10px; text-decoration:none;">Impressum</a>
+    <a href="javascript:void(0)" onclick="document.getElementById('privOv').classList.add('open')" style="color:#d4a017; margin:0 10px; text-decoration:none;">Datenschutz</a>
+</div>
+
+<div class="ov" id="impOv" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal" style="background:#1a1a1a; padding:20px; border-radius:10px; max-width:400px; margin:20% auto; color:#fff;">
+        <h3>Impressum</h3>
+        <p>Evangelos Velentakis<br>Am Markt 9<br>26340 Zetel, Deutschland<br>Email: romeocosmo@gmail.com</p>
+        <button onclick="document.getElementById('impOv').classList.remove('open')">Κλείσιμο</button>
+    </div>
+</div>
+
+<div class="ov" id="privOv" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal" style="background:#1a1a1a; padding:20px; border-radius:10px; max-width:400px; margin:20% auto; color:#fff;">
+        <h3>Datenschutz</h3>
+        <p>Το site δεν αποθηκεύει προσωπικά δεδομένα.</p>
+        <button onclick="document.getElementById('privOv').classList.remove('open')">Κλείσιμο</button>
+    </div>
+</div>
+
+
 </body>
 </html>
