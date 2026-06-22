@@ -227,7 +227,7 @@ footer{background:var(--s1);border-top:1px solid var(--br);margin-top:3rem}
       <input type="text" id="sInp" placeholder="Αναζήτηση προϊόντων..." oninput="doSearch()">
     </div>
     <div class="hdr-btns">
-      <button class="btn-user" id="userBtn" onclick="openUserModal()">👤 Είσοδος</button>
+      
       <button class="btn-cart" onclick="toggleCart()">🛒 <span class="cart-n" id="cartN">0</span></button>
     </div>
   </div>
@@ -615,7 +615,7 @@ function openUserModal(){if(curUser){if(confirm('Αποσύνδεση '+curUser.
 function showReg(){document.getElementById('regF').style.display='block';document.getElementById('loginF').style.display='none';document.getElementById('uTitle').textContent='Εγγραφή';}
 function showLogin(){document.getElementById('regF').style.display='none';document.getElementById('loginF').style.display='block';document.getElementById('uTitle').textContent='Σύνδεση';}
 function doReg(){var name=document.getElementById('rName').value.trim(),email=document.getElementById('rEmail').value.trim(),pwd=document.getElementById('rPwd').value;if(!name||!email||!pwd){showToast('Συμπλήρωσε όλα!');return;}if(users.find(function(u){return u.email===email;})){showToast('Email υπάρχει ήδη!');return;}users.push({name:name,email:email,pwd:pwd});curUser={name:name,email:email};document.getElementById('userOv').classList.remove('open');document.getElementById('userBtn').textContent='👤 '+name;showToast('Καλωσήρθες '+name+'! 🎉');}
-function doLogin(){var email=document.getElementById('lEmail').value.trim(),pwd=document.getElementById('lPwd').value;var u=users.find(function(x){return x.email===email&&x.pwd===pwd;});if(!u){showToast('❌ Λάθος στοιχεία!');return;}curUser=u;document.getElementById('userOv').classList.remove('open');document.getElementById('userBtn').textContent='👤 '+u.name;showToast('Καλωσήρθες '+u.name+'!');}
+//function doLogin(){var email=document.getElementById('lEmail').value.trim(),pwd=document.getElementById('lPwd').value;var u=users.find(function(x){return x.email===email&&x.pwd===pwd;});if(!u){showToast('❌ Λάθος στοιχεία!');return;}curUser=u;document.getElementById('userOv').classList.remove('open');document.getElementById('userBtn').textContent='👤 '+u.name;showToast('Καλωσήρθες '+u.name+'!');}
 
 function trToggle(){var m=document.getElementById('trM');m.style.display=m.style.display==='block'?'none':'block';}
 function setLang(lang,lbl){
