@@ -611,7 +611,7 @@ function adminOut(){
 
 function showUsers(){alert('Χρήστες: '+users.length+'\n'+users.map(function(u){return u.name+' - '+u.email;}).join('\n'));}
 
-function openUserModal(){if(curUser){if(confirm('Αποσύνδεση '+curUser.name+';')){curUser=null;document.getElementById('userBtn').textContent='👤 Είσοδος';showToast('Αποσυνδέθηκες!');}}else{showReg();document.getElementById('userOv').classList.add('open');}}
+//sfunction openUserModal(){if(curUser){if(confirm('Αποσύνδεση '+curUser.name+';')){curUser=null;document.getElementById('userBtn').textContent='👤 Είσοδος';showToast('Αποσυνδέθηκες!');}}else{showReg();document.getElementById('userOv').classList.add('open');}}
 function showReg(){document.getElementById('regF').style.display='block';document.getElementById('loginF').style.display='none';document.getElementById('uTitle').textContent='Εγγραφή';}
 function showLogin(){document.getElementById('regF').style.display='none';document.getElementById('loginF').style.display='block';document.getElementById('uTitle').textContent='Σύνδεση';}
 function doReg(){var name=document.getElementById('rName').value.trim(),email=document.getElementById('rEmail').value.trim(),pwd=document.getElementById('rPwd').value;if(!name||!email||!pwd){showToast('Συμπλήρωσε όλα!');return;}if(users.find(function(u){return u.email===email;})){showToast('Email υπάρχει ήδη!');return;}users.push({name:name,email:email,pwd:pwd});curUser={name:name,email:email};document.getElementById('userOv').classList.remove('open');document.getElementById('userBtn').textContent='👤 '+name;showToast('Καλωσήρθες '+name+'! 🎉');}
