@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="el">
-<head>
-<meta charset="UTF-8">
+<htmllang="el">
+<head>α<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Romeo Nexus — Premium Deals</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -407,23 +406,7 @@ footer{background:var(--s1);border-top:1px solid var(--br);margin-top:3rem}
       <h2 style="font-family:'Playfair Display',serif;font-size:1.1rem" id="uTitle">Εγγραφή</h2>
       <button class="modal-x" onclick="document.getElementById('userOv').classList.remove('open')">✕</button>
     </div>
-    <div id="regF">
-      <div class="fg"><label>Όνομα</label><input id="rName" type="text" placeholder="Το όνομά σου"></div>
-      <div class="fg"><label>Email</label><input id="rEmail" type="email" placeholder="email@example.com"></div>
-      <div class="fg"><label>Κωδικός</label><input id="rPwd" type="password" placeholder="Κωδικός..."></div>
-      <button class="btn-ok" onclick="doReg()">Εγγραφή →</button>
-      <div class="usr-sw">Έχεις λογαριασμό; <span onclick="showLogin()">Σύνδεση</span></div>
-    </div>
-    <div id="loginF" style="display:none">
-      <div class="fg"><label>Email</label><input id="lEmail" type="email" placeholder="email@example.com"></div>
-      <div class="fg"><label>Κωδικός</label><input id="lPwd" type="password" placeholder="Κωδικός..."></div>
-      <button class="btn-ok" onclick="doLogin()">Σύνδεση →</button>
-      <div class="usr-sw">Δεν έχεις λογαριασμό; <span onclick="showReg()">Εγγραφή</span></div>
-    </div>
-  </div>
-</div>
-
-<div class="ov" id="impOv" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="ov" id="impOv" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="imp-modal">
     <h2>Impressum <button class="modal-x" onclick="document.getElementById('impOv').classList.remove('open')">✕</button></h2>
     <p style="color:var(--mut);font-size:.75rem;margin-bottom:1rem">Angaben gemäß § 5 TMG</p>
